@@ -8,6 +8,7 @@
 
 #import "Subject.h"
 #import "Observer.h"
+
 @interface Subject()
 @property(nonatomic,strong) NSMutableArray *obversers;
 @end
@@ -21,7 +22,6 @@
         self.obversers = [NSMutableArray array];
     }
     return self;
-    
 }
 
 -(void)addObverser:(id<Observer>)observer
@@ -41,7 +41,6 @@
     }
 }
 
-
 -(void)setState:(NSString *)state
 {
     if (![_state isEqualToString:state]) {
@@ -49,7 +48,6 @@
         [self notifyObersers];
     }
 }
-
 
 -(NSString *)description
 {

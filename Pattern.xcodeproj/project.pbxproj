@@ -11,6 +11,7 @@
 		D1D347AB1ABA70AD0014A7D4 /* Composite.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D347AA1ABA70AD0014A7D4 /* Composite.m */; };
 		D1D347AF1ABA79180014A7D4 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D347AE1ABA79180014A7D4 /* Subject.m */; };
 		D1D347B21ABA79930014A7D4 /* Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D347B11ABA79930014A7D4 /* Observer.m */; };
+		D1D48C221ABBB69D00800B2B /* Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D48C211ABBB69D00800B2B /* Adapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		D1D347AE1ABA79180014A7D4 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
 		D1D347B01ABA79930014A7D4 /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
 		D1D347B11ABA79930014A7D4 /* Observer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observer.m; sourceTree = "<group>"; };
+		D1D48C201ABBB69D00800B2B /* Adapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adapter.h; sourceTree = "<group>"; };
+		D1D48C211ABBB69D00800B2B /* Adapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Adapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 		D1D347951ABA708C0014A7D4 = {
 			isa = PBXGroup;
 			children = (
+				D1D48C1F1ABBB60700800B2B /* AdapterPattern */,
 				D1D347AC1ABA71CF0014A7D4 /* ObserverPattern */,
 				D1D347A81ABA70980014A7D4 /* ComponentPattern */,
 				D1D347A01ABA708C0014A7D4 /* Pattern */,
@@ -91,6 +95,15 @@
 				D1D347B11ABA79930014A7D4 /* Observer.m */,
 			);
 			name = ObserverPattern;
+			sourceTree = "<group>";
+		};
+		D1D48C1F1ABBB60700800B2B /* AdapterPattern */ = {
+			isa = PBXGroup;
+			children = (
+				D1D48C201ABBB69D00800B2B /* Adapter.h */,
+				D1D48C211ABBB69D00800B2B /* Adapter.m */,
+			);
+			name = AdapterPattern;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D48C221ABBB69D00800B2B /* Adapter.m in Sources */,
 				D1D347A21ABA708C0014A7D4 /* main.m in Sources */,
 				D1D347B21ABA79930014A7D4 /* Observer.m in Sources */,
 				D1D347AB1ABA70AD0014A7D4 /* Composite.m in Sources */,
@@ -266,6 +280,7 @@
 				D1D347A71ABA708C0014A7D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

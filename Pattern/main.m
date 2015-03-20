@@ -10,10 +10,13 @@
 #import "Composite.h"
 #import "Subject.h"
 #import "Observer.h"
+#import "Adapter.h"
+
 
 void testCompositePattern();
 void testObverserPattern();
 void testCombineComponentAndObverserPattern();
+void testAdapterPattern();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -22,16 +25,27 @@ int main(int argc, const char * argv[]) {
         testCompositePattern();
         
         // 观察者模式
-        testObverserPattern();
+//        testObverserPattern();
         
         // 组合模式和观察者模式的组合
         testCombineComponentAndObverserPattern();
+        
+        // 适配器模式
+        testAdapterPattern();
         
     }
     return 0;
 }
 
-#pragma mark -
+#pragma mark -适配器模式
+
+void testAdapterPattern()
+{
+    id <Target> target = [[Adapter alloc] initWithAdaptee:[Adaptee new]];
+    [target request];
+}
+
+#pragma mark -组合模式和观察者模式的组合
 
 void testCombineComponentAndObverserPattern()
 {
@@ -56,18 +70,18 @@ void testCombineComponentAndObverserPattern()
     }
     
     id <Observer> observer1 = [[Observer alloc] initWithName:@"first"];
-    id <Observer> observer2 = [[Observer alloc] initWithName:@"second"];
-    id <Observer> observer3 = [[Observer alloc] initWithName:@"third"];
+//    id <Observer> observer2 = [[Observer alloc] initWithName:@"second"];
+//    id <Observer> observer3 = [[Observer alloc] initWithName:@"third"];
     
     [container addObverser:observer1];
-    [container addObverser:observer2];
-    [container addObverser:observer3];
+//    [container addObverser:observer2];
+//    [container addObverser:observer3];
     
     [container operation];
     
-    [container deleteOberser:observer2];
-    NSLog(@"after delete Observer");
-    [container operation];
+//    [container deleteOberser:observer2];
+//    NSLog(@"after delete Observer");
+//    [container operation];
 
 }
 

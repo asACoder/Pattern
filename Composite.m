@@ -66,11 +66,8 @@
     NSEnumerator *iterator = self.components.objectEnumerator;
     id <Component> component = nil;
     while ((component = iterator.nextObject)) {
-        if ([component isKindOfClass:[Leaf class]]) {
-            [(Leaf*)component addObverser:observer];
-        }else{
-            [component addObverser:observer];
-        }
+        
+        [component addObverser:observer];
     }
 }
 
@@ -79,11 +76,8 @@
     NSEnumerator *iterator = self.components.objectEnumerator;
     id <Component> component = nil;
     while ((component = iterator.nextObject)) {
-        if ([component isKindOfClass:[Leaf class]]) {
-            [(Leaf*)component deleteOberser:observer];
-        }else{
-            [component deleteOberser:observer];
-        }
+        
+        [component deleteOberser:observer];
     }
 }
 
@@ -96,7 +90,6 @@
             [(Leaf*)component notifyObersers];
         }
     }
-
 }
 
 @end
