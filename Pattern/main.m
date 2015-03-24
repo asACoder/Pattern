@@ -11,30 +11,52 @@
 #import "Subject.h"
 #import "Observer.h"
 #import "Adapter.h"
-
+#import "State.h"
+#import "Decorator.h"
 
 void testCompositePattern();
 void testObverserPattern();
 void testCombineComponentAndObverserPattern();
 void testAdapterPattern();
+void testStatePattern();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
-        // 组合模式
-        testCompositePattern();
-        
-        // 观察者模式
+//        // 组合模式
+//        testCompositePattern();
+//        
+//        // 观察者模式
 //        testObverserPattern();
+//        
+//        // 组合模式和观察者模式的组合
+//        testCombineComponentAndObverserPattern();
+//        
+//        // 适配器模式
+//        testAdapterPattern();
+//        
+//        // 状态模式
+//        testStatePattern();
         
-        // 组合模式和观察者模式的组合
-        testCombineComponentAndObverserPattern();
-        
-        // 适配器模式
-        testAdapterPattern();
+        // 装饰者模式
+        id <ComponentInDecorator> componet = [ConcreteComponent new];
+        id <Decorator> concreteDecoratorA = [[ConcreteDecoratorA alloc] initWithComponent:componet];
+        id <Decorator> concreteDecoratorB = [[ConcreteDecoratorB alloc] initWithComponent:concreteDecoratorA];
+        [concreteDecoratorB operation];
         
     }
     return 0;
+}
+
+#pragma mark -状态模式
+
+void testStatePattern()
+{
+    Context *context = [[Context alloc] initWithState:[ConcreteStateA new]];
+    [context request];
+    [context request];
+    [context request];
+    [context request];
 }
 
 #pragma mark -适配器模式
