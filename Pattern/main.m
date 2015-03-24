@@ -19,6 +19,7 @@ void testObverserPattern();
 void testCombineComponentAndObverserPattern();
 void testAdapterPattern();
 void testStatePattern();
+void testDecoratorPattern();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -39,13 +40,21 @@ int main(int argc, const char * argv[]) {
 //        testStatePattern();
         
         // 装饰者模式
-        id <ComponentInDecorator> componet = [ConcreteComponent new];
-        id <Decorator> concreteDecoratorA = [[ConcreteDecoratorA alloc] initWithComponent:componet];
-        id <Decorator> concreteDecoratorB = [[ConcreteDecoratorB alloc] initWithComponent:concreteDecoratorA];
-        [concreteDecoratorB operation];
+        testDecoratorPattern();
+
         
     }
     return 0;
+}
+
+#pragma mark -装饰者模式
+
+void testDecoratorPattern()
+{
+    id <ComponentInDecorator> componet = [ConcreteComponent new];
+    id <Decorator> concreteDecoratorA = [[ConcreteDecoratorA alloc] initWithComponent:componet];
+    id <Decorator> concreteDecoratorB = [[ConcreteDecoratorB alloc] initWithComponent:concreteDecoratorA];
+    [concreteDecoratorB operation];
 }
 
 #pragma mark -状态模式
