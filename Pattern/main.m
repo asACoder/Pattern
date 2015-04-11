@@ -13,6 +13,8 @@
 #import "Adapter.h"
 #import "State.h"
 #import "Decorator.h"
+#import "FactoryPattern.h"
+#import "AbstractFactoryPattern.h"
 
 void testCompositePattern();
 void testObverserPattern();
@@ -20,6 +22,8 @@ void testCombineComponentAndObverserPattern();
 void testAdapterPattern();
 void testStatePattern();
 void testDecoratorPattern();
+void testFactoryPattern();
+void testAbstractFactoryPattern();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -40,11 +44,57 @@ int main(int argc, const char * argv[]) {
 //        testStatePattern();
         
         // 装饰者模式
-        testDecoratorPattern();
-
+//        testDecoratorPattern();
         
+        
+        // 工厂模式
+//        testFactoryPattern();
+        
+        // 抽象工厂方法
+        testAbstractFactoryPattern();
+
+
     }
     return 0;
+}
+
+#pragma mark -抽象工厂模式
+
+void testAbstractFactoryPattern()
+{
+    id <AbstractFactoryPattern> factory = [ConcreteFactoryA new];
+    
+    id <AbstractProductA> productA = [factory createProductA];
+    NSLog(@"%@",productA);
+    
+    id <AbstractProductB> productB = [factory createProductB];
+    NSLog(@"%@",productB);
+    
+    factory = [ConcreteFactoryB new];
+    productA = [factory createProductA];
+    NSLog(@"%@",productA);
+    
+    productB = [factory createProductB];
+    NSLog(@"%@",productB);
+}
+
+
+#pragma mark -工厂模式
+
+void testFactoryPattern()
+{
+    Creator *creator =  [ConcreteCreatorA new];
+    id <Product> product = [creator createProductWithTypeStyle:ProductAStyleOne];
+    [product operation];
+    
+    product = [creator createProductWithTypeStyle:ProductAStyleTwo];
+    [product operation];
+    
+    creator = [ConcreteCreatorB new];
+//    product = [createor createProductWithTypeStyle:ProductBStyleOne];
+//    [product operation];
+    [creator doSomethingWithType:ProductBStyleOne];
+    [creator doSomethingWithType:ProductBStyleTwo];
 }
 
 #pragma mark -装饰者模式

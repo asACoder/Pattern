@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		90277EEF1AC1BB1E003B4ED5 /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 90277EEE1AC1BB1E003B4ED5 /* State.m */; };
 		90277EF31AC1BD2E003B4ED5 /* Decorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 90277EF21AC1BD2E003B4ED5 /* Decorator.m */; };
+		90C9714D1AD8C7720022381D /* AbstractFactoryPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C9714C1AD8C7720022381D /* AbstractFactoryPattern.m */; };
+		90F4AF931AD7D47200CFD14B /* FactoryPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F4AF921AD7D47200CFD14B /* FactoryPattern.m */; };
 		D1D347A21ABA708C0014A7D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D347A11ABA708C0014A7D4 /* main.m */; };
 		D1D347AB1ABA70AD0014A7D4 /* Composite.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D347AA1ABA70AD0014A7D4 /* Composite.m */; };
 		D1D347AF1ABA79180014A7D4 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D347AE1ABA79180014A7D4 /* Subject.m */; };
@@ -33,6 +35,10 @@
 		90277EEE1AC1BB1E003B4ED5 /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = State.m; sourceTree = "<group>"; };
 		90277EF11AC1BD2E003B4ED5 /* Decorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decorator.h; sourceTree = "<group>"; };
 		90277EF21AC1BD2E003B4ED5 /* Decorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Decorator.m; sourceTree = "<group>"; };
+		90C9714B1AD8C7720022381D /* AbstractFactoryPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractFactoryPattern.h; sourceTree = "<group>"; };
+		90C9714C1AD8C7720022381D /* AbstractFactoryPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractFactoryPattern.m; sourceTree = "<group>"; };
+		90F4AF911AD7D47200CFD14B /* FactoryPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactoryPattern.h; sourceTree = "<group>"; };
+		90F4AF921AD7D47200CFD14B /* FactoryPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactoryPattern.m; sourceTree = "<group>"; };
 		D1D3479E1ABA708C0014A7D4 /* Pattern */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Pattern; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D347A11ABA708C0014A7D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1D347A91ABA70AD0014A7D4 /* Composite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Composite.h; sourceTree = "<group>"; };
@@ -74,9 +80,29 @@
 			name = DecoratorPattern;
 			sourceTree = "<group>";
 		};
+		90C9714A1AD8C7350022381D /* AbstractFactoryPattern */ = {
+			isa = PBXGroup;
+			children = (
+				90C9714B1AD8C7720022381D /* AbstractFactoryPattern.h */,
+				90C9714C1AD8C7720022381D /* AbstractFactoryPattern.m */,
+			);
+			name = AbstractFactoryPattern;
+			sourceTree = "<group>";
+		};
+		90F4AF901AD7D44400CFD14B /* FactoryPattern */ = {
+			isa = PBXGroup;
+			children = (
+				90F4AF911AD7D47200CFD14B /* FactoryPattern.h */,
+				90F4AF921AD7D47200CFD14B /* FactoryPattern.m */,
+			);
+			name = FactoryPattern;
+			sourceTree = "<group>";
+		};
 		D1D347951ABA708C0014A7D4 = {
 			isa = PBXGroup;
 			children = (
+				90C9714A1AD8C7350022381D /* AbstractFactoryPattern */,
+				90F4AF901AD7D44400CFD14B /* FactoryPattern */,
 				90277EF01AC1BCF2003B4ED5 /* DecoratorPattern */,
 				90277EEC1AC1BB0A003B4ED5 /* StatePattern */,
 				D1D48C1F1ABBB60700800B2B /* AdapterPattern */,
@@ -189,11 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D48C221ABBB69D00800B2B /* Adapter.m in Sources */,
+				90F4AF931AD7D47200CFD14B /* FactoryPattern.m in Sources */,
 				90277EF31AC1BD2E003B4ED5 /* Decorator.m in Sources */,
 				D1D347A21ABA708C0014A7D4 /* main.m in Sources */,
 				D1D347B21ABA79930014A7D4 /* Observer.m in Sources */,
 				90277EEF1AC1BB1E003B4ED5 /* State.m in Sources */,
 				D1D347AB1ABA70AD0014A7D4 /* Composite.m in Sources */,
+				90C9714D1AD8C7720022381D /* AbstractFactoryPattern.m in Sources */,
 				D1D347AF1ABA79180014A7D4 /* Subject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
