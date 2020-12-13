@@ -52,10 +52,8 @@ int main(int argc, const char * argv[]) {
         
         // 抽象工厂方法
         testAbstractFactoryPattern();
-
-
     }
-    return 0;
+    return 0;  // return
 }
 
 #pragma mark -抽象工厂模式
