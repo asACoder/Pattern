@@ -53,6 +53,7 @@ int main(int argc, const char * argv[]) {
         // 抽象工厂方法
         testAbstractFactoryPattern();
     }
+    // mark
     return 0;  // return
 }
 
